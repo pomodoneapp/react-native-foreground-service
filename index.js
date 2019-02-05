@@ -13,8 +13,8 @@ const ForegroundServiceModule = NativeModules.VIForegroundService;
  * @property {number} id - Unique notification id
  * @property {string} title - Notification title
  * @property {string} text - Notification text
- * @property {number} duration - Countdown timer duration in ms
  * @property {string} icon - Small icon name
+ * @property {string} [duration] - Countdown timer duration in ms
  * @property {number} [priority] - Priority of this notification. One of:
  *                              0 - PRIORITY_DEFAULT (by default),
  *                              -1 - PRIORITY_LOW,
