@@ -126,10 +126,12 @@ class NotificationHelper {
                 .setPriority(priority)
                 .setContentIntent(pendingIntent);
         
-        if(notificationConfig.containsKey("duration")) {
+        if (notificationConfig.containsKey("duration")) {
+            int duration = Integer.parseInt(notificationConfig.getString("duration"));
+
             notificationBuilder
                 .setUsesChronometer(true)
-                .setWhen(System.currentTimeMillis() + notificationConfig.getInt("duration"));
+                .setWhen(System.currentTimeMillis() + duration);
         }     
 
         String iconName = notificationConfig.getString("icon");
